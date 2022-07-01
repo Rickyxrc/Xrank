@@ -1,0 +1,14 @@
+version: '3'
+services:
+  server:
+    image: xrank/server
+    depends_on:
+      - db
+    links:
+      - db
+    restart: always
+  db:
+    image: mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=123456"
+    
