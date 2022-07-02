@@ -5,8 +5,8 @@ let bodyParser = require('body-parser')
 let router = require('./router')
 let sqlinit = require('./db/init')
 let path = require('path');
-let dotenv = require('dotenv')
-dotenv.config()
+// let dotenv = require('dotenv');
+// dotenv.config();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -22,8 +22,6 @@ if (sqlinit() != 0) {
     process.exit()
 }
 
-
-
-app.listen(9000, () => {
+app.listen(80, () => {
     console.log('server started.');
 });
