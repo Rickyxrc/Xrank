@@ -4,16 +4,26 @@ let cors = require('cors')
 let bodyParser = require('body-parser')
 let router = require('./router')
 let sqlinit = require('./db/init')
+let path = require('path');
+let dotenv = require('dotenv')
+dotenv.config()
 
-app.use(express.static('dist'))
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
 app.use(router);
 
-if(sqlinit()!=0)
-    process.exit()
+var history = require('connect-history-api-fallback');
+app.use(express.static(path.join(__dirname, 'dist')));
+app.use(history());
 
-app.listen(80, () => {
+if (sqlinit() != 0) {
+    console.log('error:sql init failed.');
+    process.exit()
+}
+
+
+
+app.listen(9000, () => {
     console.log('server started.');
-})
+});

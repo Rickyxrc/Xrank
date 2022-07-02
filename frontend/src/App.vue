@@ -26,7 +26,7 @@ export default {
   },
   methods: {},
   mounted() {
-    axios.get('http://127.0.0.1/user').then(res => {
+    axios.get('/user').then(res => {
       console.log(res.data);
       this.rankList = res.data;
     }).catch(err => {

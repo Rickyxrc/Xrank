@@ -1,9 +1,6 @@
-FROM node
-COPY ./dist /run/static
-COPY ./server /run/server
-CMD [ "node" , "/run/server/app.js" ]
+FROM node:16.15-alpine
+COPY ./backend /run/server
 EXPOSE 80
-RUN cd /run/server/ \
-    && npm i express \
-    && npm i cors \
-    && npm i mysql
+RUN cd /run/server \
+    && npm install
+ENTRYPOINT [ "node" , "/run/server/app.js" ]
