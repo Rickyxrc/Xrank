@@ -1,6 +1,6 @@
 let db = require('../db/index')
 
-exports.get = (req, res) => {
+module.exports = (req, res) => {
     if (req.query['API_KEY'] != process.env.API_KEY) {
         res.send('invalid API_KEY.');
         return 0;

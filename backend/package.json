@@ -1,7 +1,8 @@
 {
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "build": "echo build."
   },
   "dependencies": {
     "connect-history-api-fallback": "^2.0.0",

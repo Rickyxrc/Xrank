@@ -1,6 +1,6 @@
 let db = require('../db/index')
 
-exports.get = (req, res) => {
+module.exports = (req, res) => {
     var sql = 'SELECT (SELECT name FROM names WHERE id = name_id)"name",sum(addvalue)"score" FROM record GROUP BY name_id ORDER BY sum(addvalue) desc;'
     db.query(sql, (err, data) => {
         if (err) {
