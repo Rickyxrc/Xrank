@@ -28,7 +28,7 @@ data.db
 *.sql
 
 # database config file
-index.js
+
 
 # tencent cloud
 serverless.yml
