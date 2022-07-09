@@ -1,7 +1,7 @@
 <template>
     <nav class="navbar navbar-light topin background-blur fixed-top">
         <div class="container-fluid">
-            <span class="white-col navbar-brand mb-0 h1">Xrank</span>
+            <router-link to="/" class="white-col navbar-brand mb-0 h1">Xrank</router-link>
         </div>
     </nav>
 </template>

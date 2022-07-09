@@ -1,7 +1,7 @@
 .DS_Store
 node_modules
 /frontend/dist
-/backend/dist
+/backend/public
 
 # local env files
 .env
@@ -40,3 +40,4 @@ sl_handler.js
 
 # secret database
 docker-compose.yml
+.vercel

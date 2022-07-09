@@ -1,0 +1,7 @@
+_shims/
+.vercel
+node_modules
+_config.json
+.env
+scf_bootstrap
+sl_handler.js

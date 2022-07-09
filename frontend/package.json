@@ -10,9 +10,10 @@
   "dependencies": {
     "axios": "^0.27.2",
     "bootstrap": "^5.1.3",
-    "core-js": "^3.8.3",
+    "core-js": "^3.23.3",
     "cors": "^2.8.5",
     "ejs": "^3.1.8",
+    "epic-spinners": "^1.1.0",
     "express": "^4.18.1",
     "mysql": "^2.18.1",
     "request": "^2.88.2",
@@ -25,6 +26,7 @@
     "@babel/eslint-parser": "^7.12.16",
     "@vue/cli-plugin-babel": "~5.0.0",
     "@vue/cli-plugin-eslint": "~5.0.0",
+    "@vue/cli-plugin-router": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
     "eslint": "^7.32.0",
     "eslint-plugin-vue": "^8.0.3",
@@ -41,7 +43,7 @@
     ],
     "parserOptions": {
       "parser": "@babel/eslint-parser",
-      "requireConfigFile" : false
+      "requireConfigFile": false
     },
     "rules": {}
   },

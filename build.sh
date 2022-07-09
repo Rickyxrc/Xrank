@@ -1,6 +1,1 @@
-rm ./backend/dist
-cd frontend
-npm run build
-cd ..
-cp -r ./frontend/dist ./backend
-docker build -t rickyxrc/xrank .
+rm ./backend/public && cd frontend && npm run build && cd .. && cp -r ./frontend/dist ./backend/public && docker build -t rickyxrc/xrank . --no-cache
