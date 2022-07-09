@@ -41,3 +41,5 @@ sl_handler.js
 # secret database
 docker-compose.yml
 .vercel
+
+build/
